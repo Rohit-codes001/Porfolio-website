@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>contact</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0E202B;
+        }
+
+        .main2 {
+            height: 150px;
+            width: 100vw;
+            box-shadow: 10px 0 15px white;
+            background-color: #0e1a35;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+
+        }
+
+        .name {
+            height: 150px;
+            width: 200px;
+            display: none;
+            font-size: 3rem;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .list {
+            height: 150px;
+            width: 50vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 150px;
+            z-index: 1;
+        }
+
+        .listitem {
+            height: 80px;
+            width: 260px;
+
+        }
+
+        .listitem a {
+            color: white;
+            text-decoration: none;
+            font-size: 5rem;
+        }
+
+        a:hover {
+            color: blue;
+        }
+
+        .menu {
+            height: 100px;
+            width: 100px;
+            font-size: 2rem;
+            color: white;
+            position: absolute;
+            top: 30px;
+            left: 80vw;
+            display: none;
+
+
+        }
+
+        .phone-navbar {
+
+            height: 50vh;
+            width: 40vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            z-index: 2;
+            transform: scale(0.5);
+            opacity: 0;
+            transition: all 1s ease;
+            transform-origin: left;
+            background-color: white;
+            backdrop-filter: blur(3px);
+        }
+
+        .phonelist {
+            height: 80px;
+            color: black;
+            width: 100%;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .phone-navbar.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .phonelist a {
+            color: black;
+            text-decoration: none;
+
+        }
+
+        .msgdiv {
+            height: 100vh;
+            width: 100vw;
+
+            position: relative;
+            top: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .msgdivmain {
+            height: 70%;
+            width: 60%;
+            border: 2px solid white;
+            display: flex;
+            flex-direction: column;
+            background-color: #1e293b;
+            align-items: center;
+            position: relative;
+            top: -100px;
+
+            border-radius: 2rem;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 1s ease;
+
+        }
+.msgdivmain.showup{
+    opacity: 1;
+    transform: scale(1);
+}
+        input {
+            margin-top: 100px;
+            width: 700px;
+            height: 130px;
+            border-radius: 1rem;
+            border: 2px solid black;
+            outline: none;
+            text-align: center;
+            font-size: 4rem;
+
+
+        }
+
+        textarea {
+            width: 80%;
+            height: 60%;
+            border-radius: 2rem;
+            margin-top: 50px;
+            font-size: 4rem;
+            border: 2px solid black;
+            padding: 20px;
+        }
+
+        .sendbtn {
+            height: 100px;
+            width: 500px;
+            border: 0px;
+            outline: none;
+            background-color: rgb(91, 180, 91);
+            font-size: 4rem;
+            margin-top: 40px;
+            border-radius: 3rem;
+        }
+        .sendbtn:hover {
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+        .phonelist a:hover {
+            color: blue;
+        }
+
+        @media (max-width: 500px) {
+            .name {
+                font-size: 1rem;
+            }
+
+            .listitem {
+                display: none;
+            }
+
+            .main2 {
+                height: 90px;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            input {
+                margin-top: 40px;
+                width: 250px;
+                height: 70px;
+                border-radius: 1rem;
+                border: 2px solid black;
+                outline: none;
+                text-align: center;
+                font-size: 1rem;
+
+            }
+
+            .msgdivmain {
+                height: 70%;
+                width: 100%;
+                border: 2px solid white;
+                margin-left: 25px;
+
+                display: flex;
+                flex-direction: column;
+                background-color: #1e293b;
+                align-items: center;
+                position: relative;
+                top: -100px;
+            }
+
+            textarea {
+                margin-top: 20px;
+                font-size: 1.5rem;
+                border: 2px solid black;
+
+            }
+
+            .sendbtn {
+                height: 70px;
+                width: 200px;
+                font-size: 2rem;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main2">
+            <div class="name">
+                <h1>Rohit</h1>
+            </div>
+            <div class="list">
+                <div class="listitem"><a href="index.html">Home</a></div>
+                <div class="listitem"><a href="about.html">About</a></div>
+                <div class="listitem"><a href="projects.html">Projects</a></div>
+                <div class="listitem"><a href="contact.html">contact</a></div>
+            </div>
+        </div>
+        <div class="phone-navbar">
+            <div class="phonelist"><a href="index.html">Home</a></div>
+            <div class="phonelist"><a href="about.html">About</a></div>
+            <div class="phonelist"><a href="projects.html">Projects</a></div>
+            <div class="phonelist"><a href="contact.html">contact</a></div>
+        </div>
+        <div class="menu">
+            <i class="ri-menu-line"></i>
+        </div>
+
+        <div class="msgdiv">
+            <div class="msgdivmain">
+                <form action=""></form>
+                <input type="text" placeholder="Enter your name">
+                <input type="email" placeholder="Enter your email">
+                <textarea name="" id="textareadata"></textarea>
+                <button class="sendbtn" type="button">Send</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        let menubtn = document.querySelector(".menu")
+        let navbar = document.querySelector(".phone-navbar")
+        menubtn.addEventListener("click", function () {
+
+            navbar.classList.toggle("show")
+        })
+        window.onload = function () {
+            let msgshow = document.querySelector(".msgdivmain")
+            msgshow.classList.add("showup")
+        }
+    </script>
+</body>
+
+</html>
