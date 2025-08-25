@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color:  #0E202B;
+        }
+
+
+        .main2 {
+            height: 150px;
+            width: 100vw;
+box-shadow: 10px 0 15px white;
+            background-color: #0e1a35;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+
+        }
+
+        .name {
+            height: 150px;
+            width: 200px;
+            display: none;
+            font-size: 3rem;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .list {
+            height: 150px;
+            width: 50vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 150px;
+            z-index: 1;
+        }
+
+        .listitem {
+            height: 80px;
+            width: 260px;
+
+        }
+
+        .listitem a {
+            color: white;
+            text-decoration: none;
+            font-size: 5rem;
+        }
+
+        a:hover {
+            color: blue;
+        }
+
+        .menu {
+            height: 100px;
+            width: 100px;
+            font-size: 2rem;
+            color: white;
+            position: absolute;
+            top: 30px;
+            left: 80vw;
+            display: none;
+
+
+        }
+
+        .phone-navbar {
+
+            height: 50vh;
+            width: 40vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            z-index: 2;
+            transform: scale(0.5);
+            opacity: 0;
+            transition: all 1s ease;
+            transform-origin: left;
+            background-color: white;
+            backdrop-filter: blur(3px);
+        }
+
+        .phonelist {
+            height: 80px;
+            color: black;
+            width: 100%;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .phone-navbar.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .phonelist a {
+            color: black;
+            text-decoration: none;
+
+        }
+
+        .phonelist a:hover {
+            color: blue;
+        }
+
+        .center-div {
+            position: absolute;
+            top: 40%;
+opacity: 0;
+            font-size: 50PX;
+            
+            height: 800px;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transform: scale(0.5);
+            transition: all 1s ease;
+        }
+        .center-div.show{
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+
+        .wellocme0 {
+            position: absolute;
+            top: 0;
+        }
+
+        .wellocme0 i {
+            font-size: 6.5rem;
+            box-shadow: 0 0 10px  18px  rgb(231, 127, 144);
+            color: white;
+            margin-left: 35px;
+            
+            cursor: pointer;
+            
+        }
+ .wellocme0 i:hover{
+    color: rgb(173, 240, 240);
+ }
+        .wellocme1 {
+            position: absolute;
+            top: 30px;
+            color: white;
+            font-size: 55px;
+        }
+
+        .wellocme2 {
+            position: absolute;
+            top: 190px;
+              color: rgb(231, 127, 144);
+
+        }
+
+        .wellocme3 {
+            position: absolute;
+            top: 400px;
+            color: rgb(98, 98, 230);
+            background-color: white;
+            border-radius: 3rem;
+            
+
+        }
+
+
+        @media (max-width: 500px) {
+            .name {
+                font-size: 1rem;
+            }
+
+            .listitem {
+                display: none;
+            }
+
+            .main2 {
+                height: 90px;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            .center-div {
+                height: 300px;
+                width: 100vw;
+                position: absolute;
+                top: 30%;
+
+                font-size: 15px;
+            }
+            .wellocme0 i {
+            font-size: 6.5rem;
+            box-shadow: 0 0 3px  5px  rgb(231, 127, 144);
+            color: white;
+            margin-left: 10px;
+            
+        }
+            .wellocme1 {
+            position: absolute;
+            top: 20px;
+            color: white;
+        font-size: 14px;
+        }
+
+            .wellocme2 {
+                position: absolute;
+                top: 60px;
+                color: rgb(231, 127, 144);
+
+            }
+                .wellocme3 {
+                    position: absolute;
+                    top: 120px;
+
+                }
+                .wellocme0 i {
+            font-size: 2rem;
+        }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="main2">
+            <div class="name">
+                <h1>Rohit</h1>
+            </div>
+            <div class="list">
+                <div class="listitem"><a href="index.html">Home</a></div>
+                <div class="listitem"><a href="about.html">About</a></div>
+                <div class="listitem"><a href="projects.html">Projects</a></div>
+                <div class="listitem"><a href="contact.html">contact</a></div>
+            </div>
+        </div>
+        <div class="phone-navbar">
+            <div class="phonelist"><a href="index.html">Home</a></div>
+            <div class="phonelist"><a href="about.html">About</a></div>
+            <div class="phonelist"><a href="projects.html">Projects</a></div>
+            <div class="phonelist"><a href="contact.html">contact</a></div>
+        </div>
+        <div class="menu">
+            <i class="ri-menu-line"></i>
+        </div>
+        <div class="center-div">
+            <div class="wellocme0"><i class="ri-code-box-fill"></i> <i class="ri-terminal-box-fill"></i> <i
+                    class="ri-money-dollar-circle-fill"></i></div>
+            <div class="wellocme1">
+                <h1 class="whitecolor">
+                    <h1>Welcome To my</h1>
+            </div>
+            <div class="wellocme2">
+                <h1>Portfolio Website</h1>
+            </div>
+            <div class="wellocme3">
+                <h4>www.Rohitportfolio.com</h4>
+            </div>
+        </div>
+
+    </div>
+    <script src="home.js"></script>
+</body>
+
+</html>
