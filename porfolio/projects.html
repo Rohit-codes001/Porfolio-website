@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0E202B;
+        }
+
+        .projectmain2 {
+            height: 150px;
+            width: 100vw;
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 0;
+            background-color: #0e1a35;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            box-shadow: 10px 0 15px white;
+
+
+        }
+
+        .name {
+            height: 150px;
+            width: 200px;
+            display: none;
+            font-size: 3rem;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .list {
+            height: 150px;
+            width: 50vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 150px;
+            z-index: 1;
+        }
+
+        .listitem {
+            height: 80px;
+            width: 260px;
+
+        }
+
+        .listitem a {
+            color: white;
+            text-decoration: none;
+            font-size: 5rem;
+        }
+
+        a:hover {
+            color: blue;
+        }
+
+        .menu {
+            height: 100px;
+            width: 100px;
+            font-size: 2rem;
+            color: white;
+            position: absolute;
+            top: 30px;
+            left: 80vw;
+            display: none;
+
+        }
+
+        .phone-navbar {
+
+            height: 50vh;
+            width: 40vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            z-index: 2;
+            transform: scale(0.5);
+            opacity: 0;
+            transition: all 1s ease;
+            transform-origin: left;
+            background-color: white;
+            backdrop-filter: blur(3px);
+        }
+
+        .phonelist {
+            height: 80px;
+            color: black;
+            width: 100%;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        .phone-navbar.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .phonelist a {
+            color: black;
+            text-decoration: none;
+
+        }
+
+
+        .phonelist a:hover {
+            color: blue;
+        }
+
+        .alltext {
+            height: 40vh;
+            width: 100vw;
+
+            position: absolute;
+            top: 150px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text1 {
+            color: rgb(223, 146, 158);
+            font-size: 5rem;
+            margin-top: 100px;
+        }
+
+        .text1 h1::after {
+            content: "Portfolio Showcase";
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0ch;
+            animation: typing 3s steps(15) infinite alternate-reverse;
+            border-right: 2px solid black;
+
+        }
+
+
+        @keyframes typing {
+            100% {
+                width: 0ch;
+            }
+
+            0% {
+                width: 15ch;
+            }
+        }
+
+        .text2 {
+            color: white;
+            font-size: 4.5rem;
+            margin-top: 100px;
+        }
+
+        .p2 {
+            margin-left: 360px;
+        }
+
+        button {
+            height: 150px;
+            width: 400px;
+            font-size: 4rem;
+            background-color: rgb(28,29,29);
+            color: white;
+            margin-top: 100px;
+            margin-left: 60px;
+            outline: none;
+            border: none;
+              border: 2px solid rgb(45, 45, 122);
+            border-radius: 2rem;
+            font-weight: 700;
+
+        }
+        .projectbtn a{
+            color: white;
+            text-decoration: none;
+        }
+
+        button:hover {
+            background-color: rgb(216, 151, 162);
+        }
+
+        .showskill-amd-project-div {
+            height: 60vh;
+            width: 100vw;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            top: 1100px;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 1s ease;
+        }
+
+        .showskill-amd-project-div.shownowskills {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .skilldiv {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+            border: 0px solid white;
+            background-color: transparent;
+            border-radius: 3rem;
+        }
+
+        .skilldiv .skill {
+            height: 80%;
+            width: 18%;
+            border: 2px solid white;
+            background-color: transparent;
+            border-radius: 2rem;
+            margin: 2%;
+            font-size: 500px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .project1-intelligent {
+            height: 80%;
+            width: 18%;
+            border: 2px solid red;
+        }
+
+
+
+        @media (max-width: 500px) {
+            .name {
+                font-size: 1rem;
+            }
+
+            .listitem {
+                display: none;
+            }
+
+            .projectmain2 {
+                height: 90px;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            .alltext {
+                height: 80vh;
+                width: 100vw;
+                position: absolute;
+
+            }
+
+            button {
+                height: 50px;
+                width: 100px;
+                margin: 30px 10px 10px 10px;
+                font-size: 1.5rem;
+                outline: none;
+                border: none;
+                box-shadow: 5px 5px 10px cyan;
+            }
+
+            .text1 {
+                font-size: 1rem;
+                margin-top: -10px;
+                position: absolute;
+                top: 30px;
+            }
+
+            .text2 {
+                font-size: 1.5rem;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-top: 10px;
+                padding-right: 10px;
+                text-align: justify;
+            }
+
+            .p2 {
+                margin-left: 5px;
+                margin-right: 10px;
+                text-align: justify;
+                padding-right: 10px;
+            }
+
+            .showskill-amd-project-div {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 620px;
+            }
+
+            .skilldiv {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                justify-content: space-between;
+                height: 100%;
+                width: 100%;
+                border: 2px solid pink;
+                flex-wrap: wrap;
+                overflow: scroll;
+                background-color: transparent;
+                border-radius: 2rem;
+
+            }
+
+            .skilldiv .skill {
+                height: 40%;
+                width: 40%;
+                border: 2px solid white;
+                margin: 2%;
+                font-size: 50px;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+                overflow: scroll;
+                margin: 5%;
+
+            }
+
+            .project1-intelligent {
+                height: 40%;
+                width: 40%;
+                border: 2px solid white;
+                margin: 2%;
+                font-size: 50px;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+                overflow: scroll;
+                margin: 5%;
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="projectmain">
+        <div class="projectmain2">
+            <div class="name">
+                <h1>Rohit</h1>
+            </div>
+            <div class="list">
+                <div class="listitem"><a href="index.html">Home</a></div>
+                <div class="listitem"><a href="about.html">About</a></div>
+                <div class="listitem"><a href="projects.html">Projects</a></div>
+                <div class="listitem"><a href="contact.html">contact</a></div>
+            </div>
+        </div>
+        <div class="phone-navbar">
+            <div class="phonelist"><a href="index.html">Home</a></div>
+            <div class="phonelist"><a href="about.html">About</a></div>
+            <div class="phonelist"><a href="projects.html">Projects</a></div>
+            <div class="phonelist"><a href="contact.html">contact</a></div>
+        </div>
+        <div class="menu">
+            <i class="ri-menu-line"></i>
+        </div>
+        <div class="alltext">
+            <div class="text1">
+                <h1> </h1>
+            </div>
+            <div class="text2">
+                <p>Explore my journey through Projects, Certificates, and Technical Expertise<br>
+                <p class="p2"> Each section represents a milestone in my continuous learning path</p>
+                </p>
+            </div>
+            <div class="text3"><button class="projectbtn" type="button"><a href="all-projects.html">Projects </a></button>
+                <button class="skillbtn" type="button">Skills</button>
+            </div>
+        </div>
+        <div class="showskill-amd-project-div">
+            <div class="projectdiv">
+                
+            </div>
+            <div class="skilldiv">
+                <div class="skill1-html skill"> <i class="fa-brands fa-html5"></i></div>
+                <div class="skill2-css skill"><i class="fa-brands fa-css3"></i></div>
+                <div class="skill4-js skill"><i class="fa-brands fa-js"></i></div>
+                <div class="skill3-talwind skill"><i class="fa-brands fa-github"></i></div>
+                <div class="skill5-cpp skill"><i class="ri-reactjs-line"></i></div>
+
+            </div>
+        </div>
+
+    </div>
+    <script>
+        let menubtn = document.querySelector(".menu")
+        let navbar = document.querySelector(".phone-navbar")
+        menubtn.addEventListener("click", function () {
+
+            navbar.classList.toggle("show")
+        })
+
+        let btn = document.querySelector(".skillbtn")
+        btn.addEventListener("click", function () {
+            let divskill = document.querySelector(".showskill-amd-project-div")
+            divskill.classList.toggle("shownowskills")
+            let skilll = document.querySelector(".skill")
+            skilll.classList.toggle("showupp")
+        })
+        let btn_project = document.querySelector(".projectbtn")
+        btn_project.addEventListener("click", function () {
+            let project_div = document.querySelector(".projectdiv")
+            project_div.classList.toggle(" ")
+        })
+
+    </script>
+</body>
+
+</html>
